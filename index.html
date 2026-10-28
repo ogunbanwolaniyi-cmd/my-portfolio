@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Portfolio of Ogunbanwo Olaniyi, Computer Science student interested in AI assistance, website design, and video editing.">
+<title>Ogunbanwo Olaniyi | Portfolio</title>
+<style>
+:root {
+  --site-primary: #16324F;
+  --site-secondary: #1F7A78;
+  --site-background: #F4F7FA;
+  --site-on-primary: #FFFFFF;
+  --site-on-secondary: #FFFFFF;
+  --site-on-background: #172331;
+  --site-font-body: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --site-font-heading: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --site-heading-scale: 1;
+  --site-spacing-scale: 1;
+  --site-radius-scale: 1;
+  --site-decoration-opacity: 1;
+  color-scheme: light dark;
+}
+* { box-sizing: border-box; }
+body { margin: 0; font-family: var(--site-font-body); background: light-dark(#F4F7FA, #111923); color: light-dark(#172331, #EDF3F8); line-height: 1.6; }
+#app { min-height: 100vh; width: 100%; border-radius: 0; background-color: var(--site-background); color: var(--site-on-background); }
+header { background: var(--site-primary); color: var(--site-on-primary); padding: calc(3.2rem * var(--site-spacing-scale)) max(6vw, 1.25rem); position: relative; overflow: hidden; }
+header::after { content:""; position:absolute; width:260px; height:260px; border:1px solid rgba(255,255,255,.2); border-radius:50%; right:-70px; top:-110px; opacity:var(--site-decoration-opacity); pointer-events:none; }
+nav { max-width: 1050px; margin:0 auto 3rem; display:flex; justify-content:space-between; align-items:center; gap:1rem; }
+.brand { font-weight:800; letter-spacing:.04em; }
+nav a { color:inherit; text-decoration:none; margin-left:1.1rem; font-size:.92rem; opacity:.9; }
+.hero, main { max-width:1050px; margin:0 auto; }
+.hero { position:relative; z-index:1; }
+.eyebrow { text-transform:uppercase; letter-spacing:.16em; font-size:.76rem; font-weight:800; color:#8FE0D4; }
+h1,h2,h3 { font-family:var(--site-font-heading); line-height:1.15; }
+h1 { font-size:clamp(2.6rem, 7vw, 4.8rem); letter-spacing:-.055em; margin:.65rem 0 1rem; max-width:800px; }
+.hero p { max-width:650px; font-size:1.1rem; color:#E2EAF1; }
+.actions { display:flex; flex-wrap:wrap; gap:.8rem; margin-top:1.7rem; }
+.button { display:inline-block; padding:.8rem 1.1rem; border-radius:calc(12px * var(--site-radius-scale)); background:var(--site-secondary); color:var(--site-on-secondary); font-weight:750; text-decoration:none; border:1px solid transparent; }
+.button.outline { background:transparent; color:inherit; border-color:rgba(255,255,255,.55); }
+main { padding:calc(2.5rem * var(--site-spacing-scale)) max(6vw, 1.25rem) 4rem; }
+section { margin:0 0 3rem; scroll-margin-top:1rem; }
+.section-kicker { color:var(--site-secondary); font-size:.75rem; font-weight:800; letter-spacing:.15em; text-transform:uppercase; }
+h2 { font-size:calc(clamp(1.8rem, 4vw, 2.5rem) * var(--site-heading-scale)); margin:.35rem 0 1rem; letter-spacing:-.035em; }
+.intro { max-width:760px; color:light-dark(#485768, #B7C4D1); }
+.grid { display:grid; grid-template-columns:repeat(3, minmax(0, 1fr)); gap:1rem; }
+.card { background:light-dark(#FFFFFF, #1A2633); border:1px solid light-dark(#DFE7EE, #344353); border-radius:calc(18px * var(--site-radius-scale)); padding:1.3rem; box-shadow:0 8px 24px rgba(18,40,60,.045); }
+.icon { width:42px; height:42px; display:grid; place-items:center; border-radius:12px; background:light-dark(#E4F3F1, #203E42); color:var(--site-secondary); font-weight:900; margin-bottom:1rem; }
+.card h3 { margin:.2rem 0 .5rem; font-size:1.15rem; }
+.card p { margin:0; color:light-dark(#526170, #B7C4D1); font-size:.95rem; }
+.tag { display:inline-block; margin:.85rem .35rem 0 0; padding:.28rem .55rem; border-radius:999px; background:light-dark(#E9EFF5, #293746); color:light-dark(#33475B, #D9E4EF); font-size:.76rem; font-weight:700; }
+.note { border-left:4px solid var(--site-secondary); padding:1rem 1.1rem; background:light-dark(#EAF4F3, #1B3033); border-radius:0 calc(12px * var(--site-radius-scale)) calc(12px * var(--site-radius-scale)) 0; }
+.contact-box { background:var(--site-primary); color:var(--site-on-primary); padding:2rem; border-radius:calc(20px * var(--site-radius-scale)); display:flex; align-items:center; justify-content:space-between; gap:1.5rem; flex-wrap:wrap; }
+.contact-box p { margin:.25rem 0 0; color:#DFE8F0; }
+.contact-box a { color:white; }
+footer { text-align:center; padding:1.5rem; font-size:.85rem; color:light-dark(#5D6B79, #AAB7C4); border-top:1px solid light-dark(#DFE7EE, #344353); }
+@media (max-width:760px) { nav { margin-bottom:2rem; align-items:flex-start; flex-direction:column; } nav a { margin:0 1rem 0 0; } .grid { grid-template-columns:1fr; } header { padding-top:2rem; } }
+@media (prefers-color-scheme: dark) { #app { background-color:#111923; color:#EDF3F8; } }
+</style>
+</head>
+<body>
+<div id="app">
+<header>
+  <nav aria-label="Main navigation">
+    <div class="brand">OO<span style="color:#8FE0D4">.</span> PORTFOLIO</div>
+    <div><a href="#about">About</a><a href="#skills">Skills</a><a href="#work">Portfolio</a><a href="#contact">Contact</a></div>
+  </nav>
+  <div class="hero">
+    <div class="eyebrow">Computer Science Student · Babcock University</div>
+    <h1>Curious about AI.<br>Focused on useful digital work.</h1>
+    <p>I’m Ogunbanwo Olaniyi, a Computer Science student interested in AI assistance, website design, and video editing. I enjoy learning tools, communicating clearly, and working carefully through a task.</p>
+    <div class="actions">
+      <a class="button" href="#contact">Get in touch</a>
+      <a class="button outline" href="#work">Explore my focus areas</a>
+    </div>
+  </div>
+</header>
+<main>
+  <section id="about">
+    <div class="section-kicker">A little about me</div>
+    <h2>Technology, creativity, and continuous learning.</h2>
+    <p class="intro">I’m based in Ogun State, Nigeria, and I’m building my skills across AI-supported workflows and digital creation. I value clear instructions, thoughtful review, and improving the quality of the final result.</p>
+  </section>
+  <section id="skills">
+    <div class="section-kicker">What I bring</div>
+    <h2>Skills & interests</h2>
+    <div class="grid">
+      <article class="card"><div class="icon">AI</div><h3>AI Assistance</h3><p>Interested in prompt-based tasks, reviewing AI-generated responses, summarizing information, and checking clarity and relevance.</p><span class="tag">AI tools</span><span class="tag">Response review</span></article>
+      <article class="card"><div class="icon">&lt;/&gt;</div><h3>Website Design</h3><p>Interested in planning and designing clear, accessible web pages and learning practical web development workflows.</p><span class="tag">Web design</span><span class="tag">User-friendly layouts</span></article>
+      <article class="card"><div class="icon">▶</div><h3>Video Editing</h3><p>Interested in editing digital video content with attention to pacing, presentation, and visual clarity.</p><span class="tag">Video content</span><span class="tag">Visual storytelling</span></article>
+    </div>
+  </section>
+  <section id="work">
+    <div class="section-kicker">How I approach tasks</div>
+    <h2>Careful work, clear communication.</h2>
+    <div class="note"><strong>Example workflow for AI-related tasks</strong><br>Understand the instructions → answer the actual question → check for clarity and consistency → flag unsupported claims or uncertainty → review the final result before submitting.</div>
+    <p class="intro" style="margin-top:1rem">This portfolio currently presents my skills and interests rather than claiming completed client projects. I plan to add links and samples of real work as they become available.</p>
+  </section>
+  <section id="education">
+    <div class="section-kicker">Education</div>
+    <h2>Babcock University</h2>
+    <p class="intro"><strong>Computer Science</strong><br>Undergraduate</p>
+  </section>
+  <section id="contact">
+    <div class="contact-box">
+      <div><div class="section-kicker" style="color:#8FE0D4">Contact</div><h2 style="margin:.3rem 0">Let’s connect.</h2><p>Available for AI assistant opportunities and digital projects.</p></div>
+      <div><p><strong>Email:</strong> <a href="mailto:ogunbanwolaniyi@gmail.com">ogunbanwolaniyi@gmail.com</a></p><p><strong>Phone:</strong> <a href="tel:08164892119">08164892119</a></p><p><strong>Location:</strong> Ogun State, Nigeria</p></div>
+    </div>
+  </section>
+</main>
+<footer>© <span id="year"></span> Ogunbanwo Olaniyi · Portfolio</footer>
+</div>
+<script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>
